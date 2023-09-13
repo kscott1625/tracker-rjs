@@ -3,7 +3,7 @@ import {Box, Typography, Divider, List} from "@mui/material"
 import Transaction from './Transaction'
 
 
-const Transactions = ({transactions}) => {
+const Transactions = ({transactions, setTransactions}) => {
   return (
     <Box>
         <Typography variant="h5">Transaction History</Typography>
@@ -11,7 +11,7 @@ const Transactions = ({transactions}) => {
         <List>
             {
                 transactions.map(transaction => (
-                  <Transaction transaction={transaction}/>
+                  <Transaction transaction={transaction} setTransactions={setTransactions} transactions={transactions}/>
                 ))
             }
         </List>

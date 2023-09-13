@@ -33,10 +33,10 @@ function App() {
         <Box>
           <Balance transactions={transactions} />
           <ExpenseCard transactions={transactions}/>
-          <NewTransaction />
+          <NewTransaction setTransactions={setTransactions}/>
         </Box>
         <Box>
-          <Transactions transactions={transactions} />
+          <Transactions transactions={transactions} setTransactions={setTransactions}/>
         </Box>
       </Component>
     </Box>
